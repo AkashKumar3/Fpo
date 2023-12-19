@@ -1,0 +1,16 @@
+*{
+    /* overflow-x: hidden; */
+}
+.nav-bg{
+    background-color: rgb(16, 210, 16);
+}
+
+.carousel-cont{
+    max-height: 80vh;
+}
+
+.carousel-img {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+}
