@@ -1,0 +1,64 @@
+/* home.css */
+
+/* Navbar styles */
+.navbar {
+    background-color: green;
+    padding: 15px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Camera section styles */
+  .camera-section {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .camera-section h2 {
+    margin-bottom: 15px;
+  }
+  
+  .camera-section button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  /* Image grid styles */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .image-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  

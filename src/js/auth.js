@@ -18,13 +18,15 @@ function Authentication() {
   const [animationData, setAnimationData] = useState(null);
   const [otpError, setOtpError] = useState('');
   const [showOtpIncorrectWarning, setShowOtpIncorrectWarning] = useState(false);
- 
+  const [otpRequested, setOtpRequested] = useState(false);
+
 
   const sendOtp = async () => {
     try {
       const recaptcha = new RecaptchaVerifier(auth, 'recaptcha', {});
       const confirmResult = await signInWithPhoneNumber(auth, phone, recaptcha);
       setConfirmation(confirmResult);
+      setOtpRequested(true);
     } catch (error) {
       console.error(error);
     }
@@ -99,7 +101,7 @@ function Authentication() {
         <h1 style={{ margin: '1.5vw 0' }}>Login</h1>
         <p style={{ margin: '1vw' }}>Please sign in to continue.</p>
 
-        <div className="phoneInput" style={{ marginBottom: '10px' }}>
+        <div className="phoneInput" style={{ marginBottom: '5px' }}>
           <PhoneInput
             country={'in'}
             value={phone}
@@ -125,32 +127,34 @@ function Authentication() {
       </div>
 
       <div style={{ marginBottom: '0.1vh' }}>
-        <input
-          type="text"
-          value={otp}
-          onChange={(e) => setOtp(e.target.value)}
-          style={{ marginLeft: '40%', marginTop: '10px', marginBottom: '20px' }}
-          className="input"
-          placeholder="Enter OTP"
-        />
-        {showOtpIncorrectWarning && (
+        {otpRequested && ( // Conditionally render OTP input and Verify button
+          <input
+            type="text"
+            value={otp}
+            onChange={(e) => setOtp(e.target.value)}
+            style={{ marginLeft: '40%', marginTop: '10px', marginBottom: '10px' }}
+            className="input"
+            placeholder="Enter OTP"
+          />
+        )}
+        {otpRequested && showOtpIncorrectWarning && (
           <p className="input-warning" style={{ color: 'red', fontSize: '0.8em' }}>
             Incorrect OTP. Please try again.
           </p>
         )}
-        {otpError && (
+        {otpRequested && otpError && (
           <p className="input-warning" style={{ color: 'red', fontSize: '0.8em' }}>
             {otpError}
           </p>
         )}
+        {otpRequested && ( // Conditionally render Verify OTP button
+          <div style={{ textAlign: 'center' }}>
+            <button onClick={verifyOtp} id="verify-OTP">
+              Verify OTP
+            </button>
+          </div>
+        )}
       </div>
-
-      <div style={{ textAlign: 'center' }}>
-        <button onClick={verifyOtp} id="verify-OTP">
-          Verify OTP
-        </button>
-      </div>
-    
     </div>
   );
 }

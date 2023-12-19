@@ -40,7 +40,7 @@ function Start() {
               <Lottie
                 animationData={animationData}
                 style={{ width: '25vw', height: '25vw' }}
-                loop
+                loop={0}
                 autoplay
                 speed={0.5} // Adjust the speed here (0.5 slows down the animation to half)
               />

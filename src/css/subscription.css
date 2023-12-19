@@ -1,0 +1,112 @@
+/* Subscription.css */
+
+/* Center content */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed for centering */
+  }
+  
+  /* Card-like container */
+  .card {
+    width: 2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    /* Add any additional styles for the card */
+  }
+  
+  /* Styles for subscription container */
+  .subscription-container {
+   margin: 40px;
+   padding-left: 35%;
+  }
+  .select-container{
+    width: 30%;
+    margin-left:50px;
+  }
+  
+  /* Common styles for select dropdown and input */
+  .select-field,
+  .input-field {
+    width: 20%;
+    padding: 8px;
+    margin-top: 10px; /* Adjust spacing */
+   
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Add any other common styles */
+  }
+  
+  /* Styles for state and region selectors */
+  .state-option,
+  .region-selector {
+   
+    margin: 50px 10px 50px 0;
+  }
+
+  /* subscription.css */
+
+.select-container {
+  margin-bottom: 20px;
+}
+
+.select-dropdown {
+  width: 300px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+  
+  .state-option h3,
+  .region-selector h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    /* Add any other common styles for headings */
+  }
+ 
+  .green-card {
+    background-color: #6fbf73;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .green-card:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  /* Animation for the main card */
+  .card {
+    margin-left: 50px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(-20px); /* Initially push card up */
+    animation-name: cardEntry;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /* Keep styles at the end of the animation */
+  }
+  
+  @keyframes cardEntry {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
