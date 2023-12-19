@@ -1,0 +1,14 @@
+*{
+    /* overflow-x: hidden; */
+}
+.nav-bg{
+    color: #FFF;
+    background-color: rgba(16, 210, 16, 0.837);
+}
+
+
+.carousel-img {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+}
