@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import '../css/subscription.css';
 
 function Subscription() {
   return (
-    <div>Subscription</div>
+    <div className="subscription">Subscription</div>
   )
 }
 
