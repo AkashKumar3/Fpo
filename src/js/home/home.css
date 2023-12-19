@@ -2,12 +2,10 @@
     /* overflow-x: hidden; */
 }
 .nav-bg{
-    background-color: rgb(16, 210, 16);
+    color: #FFF;
+    background-color: rgba(16, 210, 16, 0.837);
 }
 
-.carousel-cont{
-    max-height: 80vh;
-}
 
 .carousel-img {
     height: 70vh;
