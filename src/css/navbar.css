@@ -1,32 +1,54 @@
 .navbar-main {
-    background: linear-gradient(to bottom, #9CCC65, #4CAF50); /* Adjust colors as needed */
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+  background: linear-gradient(to bottom, #9CCC65, #4CAF50); /* Adjust colors as needed */
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
-  .navbar-links{
-    margin-left: 60%;
-  }
-  .navbar-left {
-    height: 8vh;
-    width: 10vh;
+.navbar-links{
+  margin-left: 10%;
+  font-weight: 500;
+  font-style: bold;
+  /* font-size: 20px; */
+}
 
-  }
-  .navbar-left image{
-    width: 40px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Adjust the margin as needed */
-  }
-  .navbar-links a {
-    color: #0b0b0b;
-    text-decoration: none;
-    margin-left: 15px;
-    transition: color 0.3s ease;
-  }
+.navbar-links-images{
+  position: relative;
+  margin-right: 100px;
+  font-weight: 500;
+  font-style: bold;
+  height:10vh;
+  width: 10vh;
+  /* font-size: 20px; */
+}
+.navbar-left {
+  height: 8vh;
+  width: 10vh;
+
+}
+.navbar-left image{
+  width: 40px; /* Adjust the width as needed */
+height: auto; /* Maintain aspect ratio */
+margin-right: 10px; /* Adjust the margin as needed */
+}
+.navbar-links a {
+  color: #0b0b0b;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #159b4f; /* Change to the desired hover color */
+}
+.mrd{
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: oblique;
+  color: #0b0b0b;
+  text-decoration: none;
   
-  .navbar-links a:hover {
-    color: #ff2f71; /* Change to the desired hover color */
-  }
-  
+  transition: color 0.3s ease;
+}

@@ -2,24 +2,72 @@
 .video-container {
     position: relative;
     width: 100%;
-    height: 80vh; /* Set the height to 80% of the viewport height */
+    height: 80vh;
+    /* Set the height to 80% of the viewport height */
     overflow: hidden;
-  }
-  
-  .background-video {
+}
+
+.background-video {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-  }
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+}
 
-  .video_text{
-    position: relative;
-        background-color: aliceblue;
-        width: 30%;
-        z-index: 10;
-    }
-  
-  
+.video_text {
+    position: absolute;
+    /* Change from relative to absolute */
+    /* background-color: aliceblue; */
+    font-size: 40px;
+    color: white;
+    width: 30%;
+    z-index: 10;
+    top: 30%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.video-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Adjust the alpha value to control the dimness */
+    z-index: 1;
+    /* Place the overlay above the video */
+}
+
+
+.image-container {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-left: 30%;
+    z-index: 3;
+}
+
+.circle-container {
+    position: absolute;
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #9CCC65, #4CAF50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    margin-left: 80%;
+    opacity: 90%;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background: linear-gradient(to bottom, #b2cf91, #7ebc80);
+}

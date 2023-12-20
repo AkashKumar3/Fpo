@@ -1,6 +1,10 @@
 
   body{
-    background: linear-gradient(to bottom, #4CAF50, #9CCC65); /* Adjust colors as needed */
+  /* Cream Color Gradient */
+/* Lighter Cream Color Gradient */
+background: linear-gradient(to bottom, #FEF9E7, #FFFACD);
+
+
     
   }
   .mt-4{

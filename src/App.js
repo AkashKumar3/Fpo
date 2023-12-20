@@ -6,6 +6,7 @@ import Ml from './js/ml.js';
 import Home from './js/home.js';
 import RentEquipment from './js/equipments.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Soil from './js/soil.js';
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/ml" element={<Ml />} />
         <Route path="/home" element={<Home />} />
         <Route path="/rentEquipments" element={<RentEquipment />} />
+        <Route path="/soil" element={<Soil />} />
       </Routes>
     </Router>
   );
