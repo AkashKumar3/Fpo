@@ -1,0 +1,36 @@
+/* Footer styles */
+.site-footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+  }
+  
+  .site-footer h5 {
+    color: #333;
+  }
+  
+  .site-footer p {
+    color: #666;
+  }
+  
+  .site-footer ul.quick-links {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .site-footer ul.quick-links li {
+    margin-bottom: 10px;
+  }
+  
+  .site-footer ul.quick-links li a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .site-footer ul.quick-links li a:hover {
+    color: #333;
+  }
+  
+  .site-footer hr {
+    border-top-color: #ddd;
+  }
+  

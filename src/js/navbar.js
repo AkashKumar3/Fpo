@@ -3,55 +3,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/navbar.css'; // Add a custom CSS file for additional styling
 
 const Navbar = () => {
-    return (
-      <div>
-        <nav className='navbar-main'>
-        <a href="index.html aa">Marketplace</a> 
-        <a href="buy-seeds.html aa">Cold Storage</a> 
-        <a href="buy-fertilizer.html aa"> Equipments</a> 
-        <a href="rent-equipment.html aa ">Government Schemes</a> 
-        <a href="sell-goods.html aa">Shop</a> 
-    </nav>
+  return (
+    <div>
+      <nav className='navbar-main'>
+      {/* <div className="navbar-left">
+          <img src={'https://th.bing.com/th?id=OIP.SN8Sb3zD2xPNd-7e-nZeoQHaMk&w=191&h=325&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'} alt="Logo" className="logo-img" />
+        </div> */}
+        <div className='navbar-links'>
+          <a href="/rentEquipments">Rent Equipments</a>
+          <a href="buy-seeds.html">Cold Storage</a>
+          <a href="rent-equipment.html">Government Schemes</a>
+          <a href="/marketplace">Marketplace</a>
+          <a href="sell-goods.html">Shop</a>
+        </div>
+      </nav>
+    </div>
+  );
+};
 
-      </div>
-      
-      //   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      //   <a class="navbar-brand" href="#">Navbar</a>
-      //   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      //     <span class="navbar-toggler-icon"></span>
-      //   </button>
-      //   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      //     <ul class="navbar-nav">
-      //       <li class="nav-item active">
-      //         <a class="nav-link" href="#">Marketplace</a>
-      //       </li>
-      //       <li class="nav-item">
-      //         <a class="nav-link" href="#">Cold Storage</a>
-      //       </li>
-      //       <li class="nav-item">
-      //         <a class="nav-link" href="#">Rent Equipments</a>
-      //       </li>
-      //       <li class="nav-item">
-      //         <a class="nav-link" href="#">Government Schemes</a>
-      //       </li>
-      //       <li class="nav-item">
-      //         <a class="nav-link" href="#">Shop</a>
-      //       </li>
-      //       <li class="nav-item dropdown">
-      //         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      //           More
-      //         </a>
-      //         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-      //           <a class="dropdown-item" href="#">Action</a>
-      //           <a class="dropdown-item" href="#">Another action</a>
-      //           <a class="dropdown-item" href="#">Something else here</a>
-      //         </div>
-      //       </li>
-      //     </ul>
-      //   </div>
-      // </nav>
-
-    );
-  };
-  
-  export default Navbar;
+export default Navbar;

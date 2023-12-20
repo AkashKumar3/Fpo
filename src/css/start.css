@@ -4,10 +4,12 @@
     padding: 0;
     overflow: hidden;
     width: 100%;
+  
   }
   
   .main {
     /* min-height: calc(100vh - 5vh); */
+    height: 100vh;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

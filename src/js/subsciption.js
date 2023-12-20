@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import '../css/subscription.css'; // Import CSS file for styling
 import { useNavigate } from 'react-router-dom';
+import { Card, ListGroup, Button } from 'react-bootstrap';
+import Lottie from 'lottie-react'; // Import Lottie component
+import animationData from '../assets/Animation - 1703035097974.json'; // Import your Lottie animation JSON file
 
 
 function Subscription() {
@@ -14,7 +17,7 @@ function Subscription() {
         // Define more regions for other states as needed
     };
 
-    const handleBuy =()=> {
+    const handleBuy = () => {
         navigate('/home');
     }
 
@@ -31,7 +34,7 @@ function Subscription() {
         <div className="center">
             <div className="subscription-container">
                 <div className="select-container">
-                    <h3 style={{marginLeft:'70px'}}>Select State</h3>
+                    <h3 style={{ marginLeft: '70px' }}>Select State</h3>
                     <select
                         className="select-dropdown"
                         value={selectedState}
@@ -46,7 +49,7 @@ function Subscription() {
                 </div>
                 {selectedState && (
                     <div className="select-container">
-                        <h3 style={{marginLeft:'60px'}}>Select Region</h3>
+                        <h3 style={{ marginLeft: '60px' }}>Select Region</h3>
                         <select
                             className="select-dropdown"
                             value={selectedRegion}
@@ -59,23 +62,19 @@ function Subscription() {
                         </select>
                     </div>
                 )}
-               {selectedRegion && (
-               <div className="card">
-               <div className="green-card">
-                   <h2>Basic Plan</h2>
-                   <p>Rs. 999 for 6 months</p>
-                   <p>Includes:</p>
-                   <ul>
-                       <li>All Soil Detaiils</li>
-                       <li>Marketplace</li>
-
-                       {/* Add more features here */}
-                   </ul>
-                   <p>Description:Farmer Producer Organisation .</p>
-                   <button className="buy-button" onClick={handleBuy}>BUY NOW</button>
-               </div>
-           </div>
-        )}
+                {selectedRegion && (
+                     <Card className="subscription-card">
+                     <Card.Body>
+                     <div className="lottie-animation">
+                    <Lottie animationData={animationData} />
+                </div>
+                         <Card.Title>Basic Plan</Card.Title>
+                         <Card.Text>Rs. 999 for 6 months</Card.Text>
+                         <Card.Text>Description: Farmer Producer Organisation.</Card.Text>
+                         <Button variant="success" onClick={handleBuy}>BUY NOW</Button>
+                     </Card.Body>
+                 </Card>
+                )}
             </div>
         </div>
     );

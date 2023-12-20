@@ -1,97 +1,32 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-nav {
-    background-color: rgb(23,193,23);
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
-}
-
-nav a {
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    /* margin: 10px 5px; */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    color: #257e2c; /* Green */
-}
-
-.slider-container {
-    position: relative;
-    overflow: hidden;
-    max-height: 400px;
-    padding-top: 20px; /* Add padding to the top */
-}
-
-.slide {
-    /* display: ; */
-    position: absolute;
-    width: 100%;
-    opacity: 0.7;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-.join-button {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.join-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #555555;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.join-btn:hover {
-    background-color: #00cc00; /* Green */
-}
-
-.about-us {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-footer {
-    background-color: #333333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-.navbar-main{
-    height: 10vh;
-}
-.autoplay-video {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 10vh; /* Adjust the top position to align with the navbar */
+.navbar-main {
+    background: linear-gradient(to bottom, #9CCC65, #4CAF50); /* Adjust colors as needed */
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
+
+  .navbar-links{
+    margin-left: 60%;
+  }
+  .navbar-left {
+    height: 8vh;
+    width: 10vh;
+
+  }
+  .navbar-left image{
+    width: 40px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Adjust the margin as needed */
+  }
+  .navbar-links a {
+    color: #0b0b0b;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #ff2f71; /* Change to the desired hover color */
+  }
+  
